@@ -1,0 +1,68 @@
+body{
+    display:flex;
+    flex-direction: column;
+    /*là cách đơn giản để sắp xếp các phần tử theo chiều dọc*/
+
+    align-items: center;
+    background-color:hsl(0, 0%, 90%)
+}
+
+#myH1{
+    font-size: 4rem;
+    font-family: "Arial", sans-serif;
+    color:hsl(0, 0%, 25%)
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#display{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(0, 0%, 30%);
+    text-shadow: 2px 2px 2px hsl(0, 0%, 0%, 0.75);
+    margin-bottom: 25px;
+}
+
+#controls button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s ease;
+    
+}
+
+#startBtn{
+    background-color: rgb(24, 232, 24);
+}
+#startBtn:hover{
+    background-color: rgb(24, 179, 24);
+}
+
+#stopBtn{
+    background-color: rgb(242, 57, 57);
+}
+#stopBtn:hover{
+    background-color: rgb(190, 16, 16);
+}
+
+#resetBtn{
+    background-color: rgb(24, 142, 232);
+}
+#resetBtn:hover{
+    background-color: rgb(20, 69, 195);
+}
