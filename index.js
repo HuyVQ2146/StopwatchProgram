@@ -1,10 +1,14 @@
 const display = document.getElementById('display');
-let timer = null;
+let timer;
 let startTime = 0;
 let elapsedTime = 0; // là khoảng thời gian đã trôi qua giữa hai thời điểm
                      // tính bằng (ms)
 let isRunning = false;
 
+/* 
+Date.now() trong JavaScript trả về số milliseconds (ms) 
+đã trôi qua kể từ Epoch time (01/01/1970 00:00:00 UTC).
+*/ 
 function start(){
     if(!isRunning){
         startTime = Date.now() - elapsedTime;
@@ -18,8 +22,7 @@ function stop(){
         clearInterval(timer);
         elapsedTime = Date.now() - startTime;
         isRunning = false;
-    }
-    
+    }   
 }
 
 function reset(){
@@ -28,7 +31,6 @@ function reset(){
     elapsedTime = 0;
     isRunning = false;
     display.textContent = "00:00:00:00";
-    
 }
 
 function update(){
